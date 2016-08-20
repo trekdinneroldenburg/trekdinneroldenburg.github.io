@@ -1,45 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <!-- Required meta tags always come first-->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trekdinner Oldenburg</title>
-    <link rel="icon" href="favicon.ico">
-    <!-- Bootstrap CSS-->
+    <link rel="icon" href="media/favicon.ico">
+    <link rel="stylesheet" href="css/flickity.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    <!-- Custom font-->
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto:300" rel="stylesheet">
-    <!-- Custom CSS-->
-    <link rel="stylesheet" href="CSS/styles.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
-    <div class="header">
-      <!--h1.logo-text Trekdinner-->
-      <!--h2.logo-text Oldenburg--><img src="trekdinner.svg" class="header-pic">
-    </div>
-    <div class="container-fluid gradient"></div>
-    <div class="container-fluid wrap">
-      <div class="container us">
+    <nav><a href="#us">Wir</a><a href="#history">Geschichte</a><a href="#meetups">Treffen</a><a href="#contact">Kontakt</a></nav>
+    <div class="cover"><img src="media/trekdinner.svg"></div>
+    <div class="container wrap">
+      <div id="us" class="container">
         <h1>Das sind wir</h1>
-        <div id="carousel-example-generic" data-ride="carousel" style="max-width: 1280px; margin: 0 auto;" class="carousel slide">
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          </ol>
-          <div role="listbox" class="carousel-inner">
-            <div class="carousel-item active"><img data-src="http://placehold.it/1280x720" src="Bilder/Carousel1.jpg" alt="First slide" class="image-fluid"></div>
-            <div class="carousel-item"><img data-src="http://placehold.it/1280x720" src="Bilder/Carousel2.jpg" alt="Second slide" class="image-fluid"></div>
-            <div class="carousel-item"><img data-src="http://placehold.it/1280x720" src="http://placehold.it/1280x720" alt="Third slide" class="image-fluid"></div>
-          </div><a href="#carousel-example-generic" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="icon-prev"></span><span class="sr-only">Previous</span></a><a href="#carousel-example-generic" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="icon-next"></span><span class="sr-only">Next</span></a>
-        </div>
+        <div data-flickity="{ &quot;imagesLoaded&quot;: true}" class="carousel"><img src="http://placehold.it/1280x720"><img src="http://placehold.it/1280x720"><img src="http://placehold.it/1280x720"><img src="http://placehold.it/1280x720"><img src="http://placehold.it/1280x720"><img src="http://placehold.it/1280x720"><img src="http://placehold.it/1280x720"></div>
       </div>
-      <div class="container">
+      <div id="history" class="container">
         <h1>Unsere Geschichte</h1>
-        <p>Am 10. Mai 2009 veranstalteten die <a href="http://www.avos.org/">Oldenburger Sternenfreunde </a>eine Astronomieausstellung im PFL Oldenburg. Sylvia unterhielt sich grade, während sie vom Nachbartisch die Worte: „Mein Interesse an der Astronomie rührt von meiner Begeisterung für StarTrek her." Sie kamen von Heiko, der mit seinem Sohn die Ausstellung besuchte. Daraufhin lernten sich die beiden kennen und beschlossen, das Trekdinner Oldenburg mit weiteren Gleichgesinnten zu Gründen.</p>
+        <p>Am 10. Mai 2009 veranstalteten die <a href="http://www.avos.org/">Oldenburger Sternenfreunde</a> eine Astronomieausstellung im PFL Oldenburg. Sylvia unterhielt sich grade, während sie vom Nachbartisch die Worte: „Mein Interesse an der Astronomie rührt von meiner Begeisterung für StarTrek her." Sie kamen von Heiko, der mit seinem Sohn die Ausstellung besuchte. Daraufhin lernten sich die beiden kennen und beschlossen, das Trekdinner Oldenburg mit weiteren Gleichgesinnten zu Gründen.</p>
       </div>
-      <div class="container">
+      <div id="meetups" class="container">
         <h1>Treffen</h1>
         <div class="row">
           <div class="col-md-5">
@@ -81,7 +64,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div id="contact" class="container">
         <h1>Kontakt</h1>
         <form role="form" action="http://formspree.io/your@mail.com">
           <input type="hidden" name="_next" value="//site.io/thanks.html">
@@ -103,11 +86,13 @@
         </form>
       </div>
     </div>
-    <div class="container-fluid footer">
-      <p class="footer-text">&copy Trekdinner Oldenburg 2009 - 2016</p>
-    </div>
+    <footer class="container-fluid">
+      <p>&copy Trekdinner Oldenburg 2009 - 2016</p>
+    </footer>
     <!-- jQuery first, then Bootstrap JS.-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="js/flickity.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

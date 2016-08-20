@@ -2,51 +2,39 @@
 doctype html
 html(lang='de')
   head
-    // Required meta tags always come first
     meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     title Trekdinner Oldenburg
-    link(rel='icon', href='favicon.ico')
-    // Bootstrap CSS
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css', integrity='sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd', crossorigin='anonymous')
-    // Custom font
-    link(href='https://fonts.googleapis.com/css?family=Poiret+One|Roboto:300', rel='stylesheet')
-    // Custom CSS
-    link(rel='stylesheet', href='CSS/styles.min.css')
+    
+    link(rel='icon'       href='media/favicon.ico')
+    link(rel='stylesheet' href='css/flickity.css')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css', integrity='sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd', crossorigin='anonymous')
+    link(rel='stylesheet' href="https://fonts.googleapis.com/css?family=Roboto:300")
+    link(rel='stylesheet' href='css/styles.min.css')
+    
   body
-    .header
-      //h1.logo-text Trekdinner
-      //h2.logo-text Oldenburg
-      img.header-pic(src='trekdinner.svg')
-    .container-fluid.gradient
-    .container-fluid.wrap
-      .container.us
+    nav
+      a(href='#us') Wir
+      a(href='#history') Geschichte
+      a(href='#meetups') Treffen
+      a(href='#contact') Kontakt
+    .cover
+      img(src='media/trekdinner.svg')
+    .container.wrap
+      #us.container
         h1 Das sind wir
-        #carousel-example-generic.carousel.slide(data-ride='carousel', style='max-width: 1280px; margin: 0 auto;')
-          ol.carousel-indicators
-            li.active(data-target='#carousel-example-generic', data-slide-to='0')
-            li(data-target='#carousel-example-generic', data-slide-to='1')
-            li(data-target='#carousel-example-generic', data-slide-to='2')
-          .carousel-inner(role='listbox')
-            .carousel-item.active
-              img.image-fluid(data-src='http://placehold.it/1280x720', src='Bilder/Carousel1.jpg', alt='First slide')
-            .carousel-item
-              img.image-fluid(data-src='http://placehold.it/1280x720', src='Bilder/Carousel2.jpg', alt='Second slide')
-            .carousel-item
-              img.image-fluid(data-src='http://placehold.it/1280x720', src='http://placehold.it/1280x720', alt='Third slide')
-          a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
-            span.icon-prev(aria-hidden='true')
-            span.sr-only Previous
-          a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
-            span.icon-next(aria-hidden='true')
-            span.sr-only Next
-      .container
+        .carousel(data-flickity='{ "imagesLoaded": true}')
+          img(src='http://placehold.it/1280x720')
+          img(src='http://placehold.it/1280x720')
+          img(src='http://placehold.it/1280x720')
+          img(src='http://placehold.it/1280x720')
+          img(src='http://placehold.it/1280x720')
+          img(src='http://placehold.it/1280x720')
+          img(src='http://placehold.it/1280x720')
+      #history.container
         h1 Unsere Geschichte
-        p
-          | Am 10. Mai 2009 veranstalteten die 
-          a(href='http://www.avos.org/') Oldenburger Sternenfreunde 
-          | eine Astronomieausstellung im PFL Oldenburg. Sylvia unterhielt sich grade, während sie vom Nachbartisch die Worte: „Mein Interesse an der Astronomie rührt von meiner Begeisterung für StarTrek her." Sie kamen von Heiko, der mit seinem Sohn die Ausstellung besuchte. Daraufhin lernten sich die beiden kennen und beschlossen, das Trekdinner Oldenburg mit weiteren Gleichgesinnten zu Gründen.
-      .container
+        p Am 10. Mai 2009 veranstalteten die #[a(href='http://www.avos.org/') Oldenburger Sternenfreunde] eine Astronomieausstellung im PFL Oldenburg. Sylvia unterhielt sich grade, während sie vom Nachbartisch die Worte: „Mein Interesse an der Astronomie rührt von meiner Begeisterung für StarTrek her." Sie kamen von Heiko, der mit seinem Sohn die Ausstellung besuchte. Daraufhin lernten sich die beiden kennen und beschlossen, das Trekdinner Oldenburg mit weiteren Gleichgesinnten zu Gründen.
+      #meetups.container
         h1 Treffen
         .row
           .col-md-5
@@ -75,7 +63,7 @@ html(lang='de')
             .embed-responsive.embed-responsive-4by3
               iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2392.6880315408753!2d8.213371316013445!3d53.15169319697417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b6deffc9681065%3A0xc20db1984e2b1daa!2zUGjDtm5peA!5e0!3m2!1sde!2sde!4v1467132816102', width='400', height='300', frameborder='0', style='border:0', allowfullscreen='')
   
-      .container
+      #contact.container
         h1 Kontakt
         form(role='form', action='http://formspree.io/your@mail.com')
           input(type='hidden', name='_next', value='//site.io/thanks.html')
@@ -92,9 +80,11 @@ html(lang='de')
             textarea#InputMessage.form-control(name='InputMessage', rows='5', required)
           input#submit.btn.btn-primary-outline.btn-block(type='submit', value='Abschicken')
   
-    .container-fluid.footer
-      p.footer-text &copy Trekdinner Oldenburg 2009 - 2016
+    footer.container-fluid
+      p &copy Trekdinner Oldenburg 2009 - 2016
       
     // jQuery first, then Bootstrap JS.
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js', integrity='sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7', crossorigin='anonymous')
+    script(src='js/flickity.min.js')
+    script(src='js/script.js')
