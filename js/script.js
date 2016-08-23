@@ -1,7 +1,7 @@
-$('nav a').on('click', function(e){
+$('.scroll').on('click', function(e){
     var id = $(this).attr('href');
     $('html, body').animate({
-        scrollTop:$(id).offset().top - 35
+        scrollTop:$(id).offset().top - 45
     },'slow');
     e.preventDefault();
 });

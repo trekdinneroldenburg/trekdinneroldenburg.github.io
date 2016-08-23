@@ -37,23 +37,39 @@ nav
 .cover
   height: 100vh
   display: flex
+  padding: 40px
   justify-content: center
   align-items: center
-
-
+  img.arrow
+    height: 35px
+    width: 35px
+    align-self: flex-end
+    animation: bounce 2s infinite
+    @keyframes bounce
+      0%, 20%, 50%, 80%, 100%
+        transform: translateY(0)
+      40%
+        transform: translateY(-25px)
+      60%
+        transform: translateY(-15px)
+  a.arrow
+    align-self: flex-end
+    //border: 1px solid white
+    height: 60px
+    width: 40px
+    z-index: 110
   img
-    width: 70vmin
+    width: 65vmin
+    position: absolute
 
 .wrap
   background-color: white
-  padding-top: 15px
+  padding: 20px 0px
   margin: 15px auto
   margin-bottom: 0px
   -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75)
   -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75)
   box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75)
-  .container
-    margin-bottom: 40px
 footer
   margin: 10px
   p
@@ -64,3 +80,5 @@ footer
   img
     width: 100%
     height: auto
+hr
+  margin: 40px 0px

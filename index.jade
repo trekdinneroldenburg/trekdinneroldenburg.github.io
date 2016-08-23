@@ -14,12 +14,17 @@ html(lang='de')
     
   body
     nav
-      a(href='#us') Wir
-      a(href='#history') Geschichte
-      a(href='#meetups') Treffen
-      a(href='#contact') Kontakt
+      a.scroll(href='#us') Wir
+      a.scroll(href='#history') Geschichte
+      a.scroll(href='#meetups') Treffen
+      a.scroll(href='#contact') Kontakt
     .cover
       img(src='media/trekdinner.svg')
+      a.scroll.arrow(href='#us') 
+      img.arrow(src='media/arrow.svg')
+      
+      
+      
     .container.wrap
       #us.container
         h1 Das sind wir
@@ -31,9 +36,15 @@ html(lang='de')
           img(src='http://placehold.it/1280x720')
           img(src='http://placehold.it/1280x720')
           img(src='http://placehold.it/1280x720')
+          
+      hr
+          
       #history.container
         h1 Unsere Geschichte
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      
+      hr
+      
       #meetups.container
         h1 Treffen
         .row
@@ -62,7 +73,9 @@ html(lang='de')
           .col-md-7
             .embed-responsive.embed-responsive-4by3
               iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2392.6880315408753!2d8.213371316013445!3d53.15169319697417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b6deffc9681065%3A0xc20db1984e2b1daa!2zUGjDtm5peA!5e0!3m2!1sde!2sde!4v1467132816102', width='400', height='300', frameborder='0', style='border:0', allowfullscreen='')
-  
+      
+      hr
+      
       #contact.container
         h1 Kontakt
         form(role='form', action='http://formspree.io/your@mail.com')
