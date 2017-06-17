@@ -29,20 +29,19 @@ html(lang='de')
       #us.container
         h1 Das sind wir
         .carousel(data-flickity='{ "imagesLoaded": true}')
-          img(src='http://placehold.it/1280x720')
-          img(src='http://placehold.it/1280x720')
-          img(src='http://placehold.it/1280x720')
-          img(src='http://placehold.it/1280x720')
-          img(src='http://placehold.it/1280x720')
-          img(src='http://placehold.it/1280x720')
-          img(src='http://placehold.it/1280x720')
+          img(src='media/slide1.jpg')
+          img(src='media/slide2.jpg')
           
       hr
           
       #history.container
         h1 Unsere Geschichte
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      
+        .row
+          .col-lg-6.col-md-12
+            p Am 19. April 2009, bei einem Aktionstag der Oldenburger Sternenfreunde, trafen sich Sylvia und Heiko das erste Mal und stellten bei einem Gespräch fest, dass sie ein gemeinsames Hobby haben: <b>Star Trek</b>. Nach wenigen Minuten kam Heiko auf das Trekdinner in Bremen zu sprechen zu dem er regelmäßig fährt und sie beschlossen, ein Trekdinner in Oldenburg zu gründen. Nachdem ein Lokal gefunden und die Werbetrommel gerührt wurde, fand unser erstes Trekdinner am 22. Mai 2009 im damaligen „Carls“ statt. Seitdem treffen sich jeweils am 3. Freitag im Monat gleichgesinnte aller Altersgruppen, um bei einem gepflegten Dinner über Science, -Fiction und alltägliches zu reden.
+          .col-lg-6.col-lgd-12
+            img.img-fluid(src='media/founding.jpg')
+            
       hr
       
       #meetups.container
@@ -56,7 +55,7 @@ html(lang='de')
                   th Uhrzeit
               tbody
                 tr
-                  td 22. Juli 2016
+                  td 20. Januar 2017
                   td 19:30 Uhr
                 tr
                   td 19. August 2016
@@ -70,6 +69,10 @@ html(lang='de')
                 tr
                   td 18. November 2016
                   td 19:30 Uhr
+                tr
+                  td 18. November 2016
+                  td 19:30 Uhr
+                  
           .col-md-7
             .embed-responsive.embed-responsive-4by3
               iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2392.6880315408753!2d8.213371316013445!3d53.15169319697417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b6deffc9681065%3A0xc20db1984e2b1daa!2zUGjDtm5peA!5e0!3m2!1sde!2sde!4v1467132816102', width='400', height='300', frameborder='0', style='border:0', allowfullscreen='')
@@ -78,16 +81,15 @@ html(lang='de')
       
       #contact.container
         h1 Kontakt
-        form(role='form', action='http://formspree.io/your@mail.com')
-          input(type='hidden', name='_next', value='//site.io/thanks.html')
-          input(type='hidden', name='_subject', value='New submission!')
+        form(role='form', action='http://formspree.io/heiko.j69@gmail.com' method='POST')
+          input(type='hidden', name='_subject', value='Neue Nachricht!')
           input(type='text', name='_gotcha', style='display:none')
           .form-group
             label(for='InputName') Name
             input#InputName.form-control(type='text', name='name', placeholder='James T. Kirk', required)
           .form-group
             label(for='InputEmail') Email
-            input#InputEmail.form-control(type='email', name='_replyto', placeholder='JamesKirk@Starfleet.com', required)
+            input#InputEmail.form-control(type='email', name='email', placeholder='JamesKirk@Starfleet.com', required)
           .form-group
             label(for='InputMessage') Nachricht
             textarea#InputMessage.form-control(name='InputMessage', rows='5', required)
