@@ -15,12 +15,25 @@ $(window).scroll(function() {
     }
 });
 
-window.onload = {
-    fetch('./dates.json')
-    .then((data)=>data.json())
-    .then((data)=>{
-        for (i in data) {
-            
-        }
+window.onload = () => {
+  table = document.querySelector('#dates');
+
+  fetch('./dates.json')
+  .then(data => data.json())
+  .then(dates => {
+    console.log(dates);
+    dates.forEach(event => {
+      let newRow = table.insertRow(-1);
+      
+      let cellDate = newRow.insertCell(0),
+          cellTime  = newRow.insertCell(1);
+    
+      let dateText  = document.createTextNode(event.date),
+          timeText  = document.createTextNode(event.time);
+
+      cellDate.appendChild(dateText);
+      cellTime.appendChild(timeText);  
     })
+  })
+    
 }
