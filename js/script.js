@@ -14,3 +14,13 @@ $(window).scroll(function() {
         $('nav').removeClass("visible");
     }
 });
+
+window.onload = {
+    fetch('./dates.json')
+    .then((data)=>data.json())
+    .then((data)=>{
+        for (i in data) {
+            
+        }
+    })
+}
