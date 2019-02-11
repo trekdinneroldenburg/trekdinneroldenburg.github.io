@@ -21,7 +21,6 @@ window.onload = () => {
   fetch('./dates.json')
   .then(data => data.json())
   .then(dates => {
-    console.log(dates);
     dates.forEach(event => {
       let newRow = table.insertRow(-1);
       
